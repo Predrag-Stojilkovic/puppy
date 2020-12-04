@@ -1,0 +1,141 @@
+@import "./general";
+
+.hero {
+    margin-bottom: 240px;
+
+    .container {
+        padding: 0 90px;        
+        position: relative;        
+    }
+
+    .description {
+        width: 100%;
+        max-width: 420px;
+
+        p {
+            margin-bottom: 50px;
+            line-height: 1.75;
+        }
+        
+        .green-letters {
+            color: $accentColor;
+        }
+
+        .blue-letters {
+            color: $blue;
+        }
+
+        .orange-letters {
+            color: $orange;
+        }
+
+        .shop-btn {
+            width: 150px;
+            height: 60px;
+            line-height: 60px;
+            font-size: 16px;
+        }
+    }
+
+    .circle {
+        width: 1390px;
+        height: 1390px;
+        background: $lightBlue;
+        border-radius: 50%;
+        position: absolute;
+        bottom: -140px;
+        left: 205px;
+        overflow: hidden;
+        z-index: -1;
+
+        img {
+            position: absolute;
+            right: 50%;
+            bottom: 0;
+            transform: translateX(320px);
+        }
+    }
+}
+
+@media only screen and (max-width: 1180px) {
+    .hero {
+        margin-bottom: 200px;
+
+        .container {
+            padding: 0 24px;
+        }
+
+        .description {
+            max-width: 410px;
+    
+            p {
+                margin-bottom: 40px;
+            }
+    
+            .shop-btn {
+                height: 50px;
+                line-height: 50px;
+            }
+        }
+    
+        .circle {
+            width: 980px;
+            height: 980px;
+            bottom: -125px;
+            left: 130px;
+    
+            img {
+                width: 456px;
+                height: 466px;
+                position: absolute;
+                right: 50%;
+                bottom: -35px;
+                transform: translateX(calc(50% + 45px));
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hero {
+        margin-bottom: 160px;
+
+        .container {
+            padding: 0 20px;
+        }
+
+        .description {
+            max-width: 285px;
+
+            h1 {
+                font-size: 28px;
+                margin: 90px 0 30px;
+            }
+    
+            p {
+                font-size: 14px;
+                margin-bottom: 35px;
+            }
+    
+            .shop-btn {
+                height: 40px;
+                line-height: 40px;
+                font-size: 14px;
+            }
+        }
+    
+        .circle {
+            bottom: -105px;
+            left: 50%;
+            transform: translateX(-50%);
+    
+            img {
+                width: 369px;
+                height: 377px;
+                opacity: 10%;
+                right: 395px;
+                bottom: -5px;
+            }
+        }
+    }
+}

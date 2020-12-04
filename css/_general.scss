@@ -1,0 +1,124 @@
+@font-face {
+    font-family: Manrope-Regular;
+    src: url(../fonts/Manrope/Manrope-Regular.ttf);
+}
+
+@font-face {
+    font-family: Manrope-Bold;
+    src: url(../fonts/Manrope/Manrope-Bold.ttf);
+}
+
+@font-face {
+    font-family: RobotoSlab-Regular;
+    src: url(../fonts/RobotoSlab/RobotoSlab-Regular.ttf);
+}
+
+@font-face {
+    font-family: RobotoSlab-Bold;
+    src: url(../fonts/RobotoSlab/RobotoSlab-Bold.ttf);
+}
+
+// Variables
+$primaryFont: Manrope-Regular;
+$primaryFontBold: Manrope-Bold;
+$secondaryFont: RobotoSlab-Regular;
+$secondaryFontBold: RobotoSlab-Bold;
+$accentColor: #55bc92;
+$hoverAccentColor: #1e6b4c;
+$lightBlue: #bbd8ea;
+$lightBeige: #fafcf4;
+$lightGray: #868686;
+$blue: #1c99f2;
+$blueGray: #619ec3;
+$orange: #ff6200;
+$yellow: #f8cc6a;
+$darkBackground: #012841;
+$lightBackground: #f3eff0;
+$rightsBackground: #0b3d5c;
+
+// Mixins
+@mixin displayFlex($justifyContent) {
+    display: flex;
+    align-items: center;
+    justify-content: $justifyContent;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.cta-btn {
+    display: inline-block;
+    color: white;
+    font-family: $primaryFontBold;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    background: $accentColor;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    transition: .3s ease;
+
+    &:hover {
+        background: $hoverAccentColor;
+    }
+}
+
+h1 {
+    font-family: $secondaryFontBold;
+    font-size: 40px;
+    margin: 150px 0 30px;
+}
+
+h2 {
+    font-family: $secondaryFontBold;
+    font-size: 34px;
+}
+
+p {
+    font-family: $primaryFont;
+}
+
+@media only screen and (max-width: 1180px) {
+    .container {
+        padding: 0 24px;
+    }
+
+    h1 {
+        font-size: 38px;
+        margin: 100px 0 25px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    h1 {
+        font-size: 38px;
+        margin: 100px 0 25px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}

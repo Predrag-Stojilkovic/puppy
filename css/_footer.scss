@@ -1,0 +1,262 @@
+@import "./general";
+
+footer {
+    background: $darkBackground;
+    padding: 70px 0 20px;
+
+    .container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-bottom: 85px;
+        position: relative;
+
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;           
+        }
+
+        .footer-dog {
+            position: absolute;
+            bottom: -65px;
+            right: -60px;
+        }
+    }
+}
+
+.footer-list {
+    padding-top: 45px;
+    width: 150px;
+
+    h5 {
+        font-family: $primaryFontBold;
+        font-size: 14px;
+        color: $blueGray;
+        margin-bottom: 30px;
+    }
+}
+
+.logo-footer {
+    text-align: center;
+    width: 370px;
+    padding: 0 30px;
+    margin-right: 70px;
+
+    img {
+        margin-bottom: 30px;
+    }
+
+    p {
+        color: white;
+        font-size: 12px;
+        line-height: 1.65;
+    }
+}
+
+.about-list,
+.support-list {
+    flex-direction: column;
+
+    li {
+        padding: 0;
+        margin-bottom: 15px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-family: $primaryFont;
+            font-size: 14px;
+    
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.social-list {
+    a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: $blueGray;
+        position: relative;
+        border-radius: 5px;
+        transition: .3s ease;
+
+        &:hover {
+            background: $lightBlue;
+        }
+
+        img {
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }    
+}
+
+.rights {
+    background: $rightsBackground;
+    text-align: center;
+    padding: 20px;
+
+    p {
+        color: white;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 1180px) {
+    footer {
+        padding: 75px 0 0;
+    
+        .container {
+            justify-content: space-around;
+            padding: 0 60px;
+            padding-bottom: 100px;
+    
+            .footer-dog {
+                width: 134px;
+                height: 184px;
+                bottom: -54px;
+                right: 70px;
+            }
+        }
+    }
+
+    .footer-list {
+        padding-top: 30px;
+        width: 120px;
+    }
+
+    .logo-footer {
+        text-align: left;
+        width: 220px;
+        padding: 0;
+        margin-right: 50px;
+
+        img {
+            width: 161px;
+        }
+    
+        p {
+            font-size: 10px;
+            line-height: 1.8;
+        }
+    }
+
+    .about-list,
+    .support-list {
+        li {
+            a {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .social-list {
+        width: 100px;
+
+        a {
+            width: 25px;
+            height: 25px;
+    
+            img {
+                width: 12px;
+                height: 12px;
+            }
+        }    
+    }
+
+    .rights {    
+        p {            
+            font-size: 10px;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    footer {
+        padding: 55px 0 0;
+    
+        .container {
+            flex-direction: column;
+            align-items: center;
+            padding: 0 20px 185px;
+    
+            ul {
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            .footer-dog {
+                position: absolute;
+                bottom: 0;
+                right: 50%;
+                transform: translateX(50%);
+            }
+        }
+    }
+    
+    .footer-list {
+        padding-top: 0;
+        margin-bottom: 50px;
+        width: 137px;
+    
+        h5 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    }
+    
+    .logo-footer {
+        text-align: center;
+        width: 100%;
+        padding: 0;
+        margin: 0 0 45px;
+    
+        img {
+            margin-bottom: 30px;
+        }
+    
+        p {
+            font-size: 12px;
+            line-height: 1.5;
+        }
+    }
+    
+    .about-list,
+    .support-list {
+        li {
+            a {
+                font-size: 12px;
+            }
+        }
+    }
+    
+    .social-list {
+        flex-direction: row !important;
+        width: 100%;
+
+        a {
+            width: 35px;
+            height: 35px;
+    
+            img {
+                width: 16px;
+                height: 16px;
+            }
+        }    
+    }
+}

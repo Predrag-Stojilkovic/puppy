@@ -1,0 +1,214 @@
+@import "./general";
+
+.products {
+    width: 100%;
+    max-width: 1180px;
+    margin: 100px auto 50px;
+    padding: 0 20px;
+    
+    h2 {
+        font-family: $secondaryFontBold;
+        font-size: 34px;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+}
+
+.slider-images{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.slides {
+    list-style: none;    
+    width: 955px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+
+    li {
+        width: 175px;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        transition: .3s linear;
+
+        figure {
+            div {
+                width: 100%;
+                height: 180px;
+                background: $lightBackground;
+                border-radius: 5px;
+                display: flex;
+
+                img {
+                    max-width: 130px;
+                    max-height: 135px;
+                    margin: auto;
+                }
+            }
+
+            figcaption,
+            span {
+                font-family: $secondaryFontBold;
+                font-size: 14px;                
+            }
+
+            figcaption {
+                padding: 15px 20px 10px;
+            }
+
+            span {
+                color: $orange;
+            }
+        }
+    }
+}
+
+.slider-btn {
+    display: flex;
+    background: $accentColor;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    z-index: 2;
+    transform: translateY(70px);
+    transition: .3s ease;
+    
+    &:hover {
+        background: $hoverAccentColor;
+    }
+
+    img {
+        width: 14px;
+        pointer-events: none;
+        margin: auto;        
+    }
+}
+
+.slider-btn-left {   
+    img {
+        transform: rotate(90deg);
+    }
+}
+
+.slider-btn-right {
+    img {
+        transform: rotate(-90deg);
+    }
+}
+
+@media only screen and (max-width: 1180px) {
+    .products {
+        margin: 75px 0 20px;
+        padding: 0 10px;
+        
+        h2 {
+            margin-bottom: 65px;
+        }
+    }
+
+    .slider-images{
+        justify-content: center;
+    }
+
+    .slides {
+        width: 636px;
+        height: 250px;
+    
+        li {
+            width: 116px;
+    
+            figure {
+                div {
+                    height: 120px;
+    
+                    img {
+                        max-width: 90px;
+                        max-height: 90px;
+                    }
+                }
+    
+                figcaption,
+                span {
+                    font-size: 12px;
+                }
+
+                figcaption {
+                    padding: 10px;
+                }
+            }
+        }    
+    }
+    
+    .slider-btn-left {   
+        transform: translate(-10px, 40px);
+    }
+    
+    .slider-btn-right {
+        transform: translate(10px, 40px);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .products {
+        margin: 70px 0 270px;
+        padding: 0;
+        
+        h2 {
+            margin-bottom: 40px;
+        }
+    }
+
+    .slider-images {
+        position: relative;
+    }
+
+    .slides {
+        width: 528px;
+        height: 240px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    
+        li {
+            width: 96px;
+    
+            figure {
+                div {
+                    height: 100px;
+    
+                    img {
+                        max-width: 70px;
+                        max-height: 70px;
+                    }
+                }
+            }
+        }    
+    }
+    
+    .slider-btn {
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        top: 165px;
+    
+        img {
+            width: 11px;       
+        }
+    }
+    
+    .slider-btn-left {
+        right: 50%;
+    }
+    
+    .slider-btn-right {
+        left: 50%;
+    }
+}
